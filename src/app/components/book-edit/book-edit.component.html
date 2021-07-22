@@ -1,0 +1,34 @@
+<div>
+    <form [formGroup]="bookForm" (ngSubmit)="update()">
+        <div class="inputContainer">
+            <mat-form-field appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" formControlName="name" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Autor</mat-label>
+                <input matInput type="text" formControlName="author" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Categoría</mat-label>
+                <input matInput type="text" formControlName="category" required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Stock</mat-label>
+                <input matInput type="number" formControlName="stock" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Tarifa</mat-label>
+                <input matInput type="number" formControlName="rate" required>
+            </mat-form-field>
+        </div>
+
+        <div style="margin: auto; width: fit-content; padding: 20px;">
+            <button mat-raised-button (click)='goBack()'>Cancelar</button>
+            <button mat-raised-button type="submit">Actualizar</button>
+        </div>
+    </form>
+</div>

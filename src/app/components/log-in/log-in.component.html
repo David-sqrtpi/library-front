@@ -1,0 +1,22 @@
+<div>
+    <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+        <h1> <b>Inicio de Sesión</b> </h1>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Correo electrónico</mat-label>
+            <input matInput type="email" formControlName="email" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" formControlName="password" required>
+        </mat-form-field>
+
+        <p style="width: fit-content; margin: auto; padding-bottom: 10px;">No tienes una cuenta? <a
+                routerLink="/sign-up">Registrarse</a> </p>
+
+        <button mat-raised-button type="submit">Iniciar Sesión</button>
+    </form>
+
+    <mat-spinner diameter="50" style="margin: auto; top: 30px;" *ngIf='waiting'></mat-spinner>
+</div>

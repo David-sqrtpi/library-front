@@ -1,0 +1,16 @@
+.inputContainer {
+    background-color: gainsboro;
+    padding: 30px;
+    width: 70%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+div {
+    padding: 20px;
+}
+
+mat-form-field {
+    display: block;
+    margin: auto;
+}

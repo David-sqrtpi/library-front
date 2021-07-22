@@ -1,0 +1,27 @@
+<div>
+    <form [formGroup]="clientForm" (ngSubmit)="signUp()">
+        <h1> <b>Registro de usuario</b> </h1>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" formControlName="name" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Correo electrónico</mat-label>
+            <input matInput type="email" formControlName="email" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" formControlName="password" required>
+        </mat-form-field>
+
+        <p style="width: fit-content; margin: auto; padding-bottom: 10px;">Ya está registrado? <a
+                routerLink="/log-in">Iniciar
+                sesión</a> </p>
+
+        <button mat-raised-button type="submit">Registrarse</button>
+    </form>
+    <mat-spinner diameter="50" style="margin: auto; top: 30px;" *ngIf='waiting'></mat-spinner>
+</div>

@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'library';
+
+  logged: boolean = sessionStorage.getItem("userId") ? true : false;
+
+  logOut() {
+    sessionStorage.clear();
+    location.reload();
+  }
+
 }

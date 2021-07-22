@@ -1,0 +1,15 @@
+<h1 style="padding: 30px;"> <b>Detalle de la reserva</b> </h1>
+
+<div>
+    <div
+        style="background-color: gainsboro; max-width: 50%; margin: auto; padding: 20px; border-radius: 10px; align-items: center;">
+        <h1><b>{{reserve.book!.name}}</b></h1>
+        Cantidad: {{reserve.quantity}} <br>
+        Fecha de entrega: {{reserve.endDate | date:'d/M/yy'}} <br>
+        Total a pagar: ${{reserve.total}}<br>
+    </div>
+
+    <div style="margin: auto; width: fit-content; padding: 20px;">
+        <button mat-raised-button routerLink='/books'>Reservar otro libro</button>
+    </div>
+</div>

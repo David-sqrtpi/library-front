@@ -1,0 +1,23 @@
+div {
+    padding: 20px;
+}
+
+mat-form-field, button {
+    display: block;
+    margin: auto;
+    padding: 5px;
+}
+
+form {
+    padding: 30px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: gainsboro;
+    max-width: max-content;
+}
+
+h1 {
+    padding: 10px;
+    width: max-content;
+    margin: auto;
+}

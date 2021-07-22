@@ -1,0 +1,10 @@
+div {
+    width: 100%;
+    background-color: lightskyblue;
+    padding: 10px;
+}
+
+button {
+    position: relative;
+    left: 90%;
+}

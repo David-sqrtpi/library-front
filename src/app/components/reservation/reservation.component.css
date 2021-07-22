@@ -1,0 +1,18 @@
+mat-form-field {
+    display: block;
+    padding: 10px;
+}
+
+.options {
+    width: fit-content;
+    margin: auto;
+}
+
+button {
+    background-color: lightgray;
+}
+
+h1 {
+    width: fit-content;
+    margin: auto;
+}

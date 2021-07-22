@@ -1,0 +1,24 @@
+<div style="padding: 20px;" *ngIf='!waiting && book.name'>
+    <div
+        style="background-color: gainsboro; max-width: 50%; margin: auto; padding: 20px; border-radius: 10px; align-items: center;">
+        <h1><b>{{book.name}}</b></h1>
+        <h2><i>{{book.author}}</i></h2>
+        Categoría: {{book.category}} <br>
+        Tarifa: ${{book.rate}}/día<br>
+        Unidades disponibles: {{book.availableQuantity}} <br>
+    </div>
+
+    <div style="margin: auto; width: fit-content; padding: 20px;" [matTooltipDisabled]='book.availableQuantity! > 0'
+        matTooltip='No hay libros disponibles'>
+        <button mat-raised-button (click)='reserve()' [disabled]='!book.availableQuantity'>Reservar</button>
+    </div>
+</div>
+
+<div style="padding: 20px;">
+    <div *ngIf='!book.name && !waiting'
+        style="background-color: gainsboro; max-width: 50%; margin: auto; padding: 50px; border-radius: 10px; align-items: center;">
+        Lo sentimos, el libro requerido no se ha podido encontrar
+    </div>
+</div>
+
+<mat-spinner style="margin: auto; top: 50px;" *ngIf='waiting'></mat-spinner>
